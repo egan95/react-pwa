@@ -2,7 +2,7 @@
   "name": "template_frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://egan95.github.io/pwa-react-build/",
+  "homepage": "https://egan95.github.io/react-pwa/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@testing-library/jest-dom": "^5.14.1",
