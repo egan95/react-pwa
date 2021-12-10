@@ -2,6 +2,7 @@
   "name": "template_frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://egan95.github.io/pwa-react-build/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@testing-library/jest-dom": "^5.14.1",
@@ -12,6 +13,7 @@
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.7.1",
     "boxicons": "^2.0.9",
+    "gh-pages": "^3.2.3",
     "glightbox": "^3.1.0",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.6.0",
@@ -26,6 +28,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
