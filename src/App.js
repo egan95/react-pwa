@@ -12,6 +12,7 @@ import Team from "./component/pages/Team";
 import Testimonial from "./component/pages/Testimonial";
 import ScrolltoTop from "./component/ScrolltoTop";
 import Lib from "./component/Lib";
+import Offline from "./component/pages/Ofline";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="team" element={<Team />} />
         <Route path="testimonial" element={<Testimonial />} />
+        <Route path="offline" element={<Offline />} />
       </Routes>
     <Footer/>
     <ScrolltoTop/>
