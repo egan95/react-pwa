@@ -36,14 +36,13 @@ function Lib() {
             }
           }, true)
 
-        let heroCarouselIndicators = select("#hero-carousel-indicators")
-        let heroCarouselItems = select('#heroCarousel .carousel-item', true)
-
-        heroCarouselItems.forEach((item, index) => {
-        (index === 0) ?
-        heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
-            heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
-        });
+          on('click', '#navbar li', function(e) {
+            if (!this.classList.contains('dropdown') && select('#navbar').classList.contains('navbar-mobile')) {
+              select('#navbar').classList.toggle('navbar-mobile')
+              select('.mobile-nav-toggle').classList.toggle('bi-list')
+              select('.mobile-nav-toggle').classList.toggle('bi-x')
+            }
+          },true) 
 
         AOS.init({
           duration: 1000,

@@ -1,9 +1,38 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import PortofolioLib from '../PortofolioLib';
 
 function Home() {
   document.title=`Home`;
 
+  const select = (el, all = false) => {
+    el = el.trim()
+    if (all) {
+      return [...document.querySelectorAll(el)]
+    } else {
+      return document.querySelector(el)
+    }
+  }
+  const on = (type, el, listener, all = false) => {
+    let selectEl = select(el, all)
+    if (selectEl) {
+      if (all) {
+        selectEl.forEach(e => e.addEventListener(type, listener))
+      } else {
+        selectEl.addEventListener(type, listener)
+      }
+    }
+  }
+
+  useEffect(() => {
+    let heroCarouselIndicators = select("#hero-carousel-indicators")
+        let heroCarouselItems = select('#heroCarousel .carousel-item', true)
+
+        heroCarouselItems.forEach((item, index) => {
+        (index === 0) ?
+        heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
+            heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
+        });
+  })
     return (
         <div>
             <section id="hero">
@@ -64,7 +93,7 @@ function Home() {
                         <div className="row content">
                         <div className="col-lg-6" data-aos="fade-right">
                             <h2>Eum ipsam laborum deleniti velitena</h2>
-                            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee trave</h3>
+                            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assum perenda sruen jonee</h3>
                         </div>
                         <div className="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
                             <p>

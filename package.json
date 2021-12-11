@@ -1,8 +1,7 @@
 {
   "name": "template_frontend",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "private": true,
-  "homepage": "https://egan95.github.io/pwa-react-build/",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "@testing-library/jest-dom": "^5.14.1",
@@ -17,6 +16,7 @@
     "glightbox": "^3.1.0",
     "isotope-layout": "^3.0.6",
     "jquery": "^3.6.0",
+    "moment": "^2.29.1",
     "popper": "^1.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
